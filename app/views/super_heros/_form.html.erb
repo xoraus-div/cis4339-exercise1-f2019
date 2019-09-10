@@ -1,0 +1,27 @@
+<%= form_with(model: super_hero, local: true) do |form| %>
+  <% if super_hero.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(super_hero.errors.count, "error") %> prohibited this super_hero from being saved:</h2>
+
+      <ul>
+        <% super_hero.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :real_name %>
+    <%= form.text_field :real_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hero_name %>
+    <%= form.text_field :hero_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

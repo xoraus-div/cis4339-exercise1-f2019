@@ -1,0 +1,32 @@
+<%= form_with(model: super_power, local: true) do |form| %>
+  <% if super_power.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(super_power.errors.count, "error") %> prohibited this super_power from being saved:</h2>
+
+      <ul>
+        <% super_power.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :super_hero_id %>
+    <%= form.text_field :super_hero_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
