@@ -17,7 +17,7 @@
       <tr>
         <td><%= super_power.name %></td>
         <td><%= super_power.description %></td>
-        <td><%= super_power.super_hero_id %></td>
+        <td><%= super_power.super_hero.hero_name %></td>
         <td><%= link_to 'Show', super_power %></td>
         <td><%= link_to 'Edit', edit_super_power_path(super_power) %></td>
         <td><%= link_to 'Destroy', super_power, method: :delete, data: { confirm: 'Are you sure?' } %></td>

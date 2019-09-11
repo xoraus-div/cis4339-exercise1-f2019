@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :super_hero_id %>
-    <%= form.text_field :super_hero_id %>
+    <%= form.collection_select :super_hero_id, SuperHero.all, :id, :hero_name %>
   </div>
 
   <div class="actions">
